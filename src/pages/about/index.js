@@ -19,6 +19,7 @@ export const About = () => {
                     <meta name="description" content={meta.description}/>
                     <meta name="description" content={meta.description}/>
                     <meta name="title" content="About | Takeshi`s Portfolio"/>
+                    <meta property="og:type" content="website"/>
                     <meta property="og:title" content="About | Takeshi`s Portfolio"/>
                     <meta property="og:image" content={`${process.env.PUBLIC_URL}/site-icon.jpg`}/>
                     <meta property="og:description" content="Saito`s portfolio site"/>
