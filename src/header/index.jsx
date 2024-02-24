@@ -50,6 +50,7 @@ export const Headermain = () => {
                             <a href={socialprofils.linkedin}>Facebook</a>
                             <a href={socialprofils.github}>Github</a>
                             <a href={socialprofils.twitter}>Twitter</a>
+                            <a href={socialprofils.artstation}>ArtStation</a>
                         </div>
                         <p className="copyright m-0">copyright __ {logotext}</p>
                     </div>
