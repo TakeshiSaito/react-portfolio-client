@@ -7,6 +7,7 @@ import {
 } from "../../content_option";
 import "./style.css";
 import {Avatar, Skeleton} from "@mui/material";
+import React from "react";
 
 export const About = () => {
     return (
@@ -16,6 +17,16 @@ export const About = () => {
                     <meta charSet="utf-8"/>
                     <title> About | {meta.title}</title>
                     <meta name="description" content={meta.description}/>
+                    <meta name="description" content={meta.description}/>
+                    <meta name="title" content="Takeshi`s Portfolio"/>
+                    <meta property="og:title" content="Takeshi`s Portfolio"/>
+                    <meta property="og:image" content={`${process.env.PUBLIC_URL}/site-icon.jpg`}/>
+                    <meta property="og:description" content="Saito`s portfolio site"/>
+                    <meta property="og:site_name" content="Takeshi Saito`s Portfolio"/>
+                    <meta property="og:locale" content="en_US"/>
+                    <meta name="twitter:site" content="@TakeshiSaito_TA"/>
+                    <meta name="twitter:card" content="summary_large_image"/>
+                    <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>
                 </Helmet>
                 <Row className="mb-5 mt-3 pt-md-3">
                     <Col lg="8">
