@@ -2,6 +2,7 @@ import {
     FaGithub,
     FaTwitter,
     FaLinkedin,
+    FaArtstation
 } from "react-icons/fa";
 import './style.css';
 import {socialprofils} from "../../content_option";
@@ -28,6 +29,13 @@ export const Socialicons = (params) => {
                     <li>
                         <a href={socialprofils.linkedin}>
                             <FaLinkedin/>
+                        </a>
+                    </li>
+                )}
+                {socialprofils.artstation && (
+                    <li>
+                        <a href={socialprofils.artstation}>
+                            <FaArtstation/>
                         </a>
                     </li>
                 )}

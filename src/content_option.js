@@ -1,4 +1,3 @@
-// import AnomeImage from './images/anome.png'; // 画像をインポート
 const logotext = "SAITO";
 
 const introdata = {
@@ -10,6 +9,7 @@ const introdata = {
     },
     description: "Technical artist with a programmer background",
     home_img_url: `${process.env.PUBLIC_URL}/dhw-still-half.jpg`,
+    e_mail: "takeshi.saito.9119@gmail.com"
 };
 
 const meta = {
@@ -20,10 +20,11 @@ const socialprofils = {
     github: "https://github.com/TakeshiSaito",
     linkedin: "https://www.linkedin.com/in/takeshi-saito-aa6894180/",
     twitter: "https://twitter.com/TakeshiSaito_TA",
+    artstation: "https://www.artstation.com/fuka00",
 };
 const dataabout = {
     title: "About me",
-    aboutme: "I am currently working as a Technical Director at a CG company. My primary responsibilities include creating tools for Maya using Python, creating Blueprints necessary for production in UE, and developing tools required for workflow optimization. " +
+    aboutme: "I am currently working as a Technical Director at ModelingCafe inc.. My primary responsibilities include creating tools for Maya using Python, creating Blueprints necessary for production in UE, and developing tools required for workflow optimization. " +
         "I am dedicated to building scalable systems, such as developing deadline(AWS) plugins and establishing CI/CD workflows with limited resources.\n" +
         "Additionally, I also create essential support tools for artists, including tools for virtual human production. I am actively working on ensuring the quality of in-house tools by implementing Python unittest.\n" +
         "Before this role, I worked as a Technical Artist, providing support for cinematic scenes in games. During this time, I gained experience in creating Python programs for DCC tools, developing standalone tools, and creating Blueprints for UE.\n" +
