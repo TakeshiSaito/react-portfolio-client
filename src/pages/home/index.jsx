@@ -11,18 +11,8 @@ export const Home = () => {
             <section id="home" className="home">
                 <Helmet>
                     <meta charSet="utf-8"/>
-                    {/*<title> {meta.title}</title>*/}
-                    {/*<meta name="description" content={meta.description}/>*/}
-                    {/*<meta name="title" content="About | Takeshi`s Portfolio"/>*/}
-                    {/*<meta property="og:title" content="About | Takeshi`s Portfolio"/>*/}
-                    {/*<meta property="og:type" content="website"/>*/}
-                    {/*<meta property="og:image" content={`${process.env.PUBLIC_URL}/site-icon.jpg`}/>*/}
-                    {/*<meta property="og:description" content="Saito`s portfolio site"/>*/}
-                    {/*<meta property="og:site_name" content="Takeshi Saito`s Portfolio"/>*/}
-                    {/*<meta property="og:locale" content="en_US"/>*/}
-                    {/*<meta name="twitter:site" content="@TakeshiSaito_TA"/>*/}
-                    {/*<meta name="twitter:card" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>*/}
-                    {/*<meta name="twitter:image" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>*/}
+                    <title> {meta.title}</title>
+                    <meta name="description" content={meta.description}/>
                 </Helmet>
                 <div className="intro_sec d-block d-lg-flex align-items-center">
                     <div
