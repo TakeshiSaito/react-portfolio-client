@@ -13,8 +13,8 @@ export const Portfolio = () => {
                     <title> Portfolio | {meta.title} </title>{" "}
                     <meta name="description" content={meta.description}/>
                     <meta name="description" content={meta.description}/>
-                    <meta name="title" content="Takeshi`s Portfolio"/>
-                    <meta property="og:title" content="Takeshi`s Portfolio"/>
+                    <meta name="title" content="About | Takeshi`s Portfolio"/>
+                    <meta property="og:title" content="About | Takeshi`s Portfolio"/>
                     <meta property="og:image" content={`${process.env.PUBLIC_URL}/site-icon.jpg`}/>
                     <meta property="og:description" content="Saito`s portfolio site"/>
                     <meta property="og:site_name" content="Takeshi Saito`s Portfolio"/>
@@ -24,7 +24,7 @@ export const Portfolio = () => {
                     <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>
                 </Helmet>
                 <Row className="mb-5 mt-3 pt-md-3">
-                    <Col lg="8">
+                <Col lg="8">
                         <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
                         <hr className="t_border my-4 ml-0 text-left"/>
                     </Col>
