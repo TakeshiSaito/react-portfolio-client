@@ -6,7 +6,7 @@ import AppRoutes from "./app/App";
 import './index.css';
 import {meta} from "./content_option";
 import {Helmet, HelmetProvider} from "react-helmet-async";
-import stillheader from "assets/still-header.jpg";
+// import stillheader from "assets/still-header.jpg";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
