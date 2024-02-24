@@ -21,7 +21,7 @@ export const Home = () => {
                     <meta property="og:site_name" content="Takeshi Saito`s Portfolio"/>
                     <meta property="og:locale" content="en_US"/>
                     <meta name="twitter:site" content="@TakeshiSaito_TA"/>
-                    <meta name="twitter:card" content="summary_large_image"/>
+                    <meta name="twitter:card" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>
                     <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/still-header.jpg`}/>
                 </Helmet>
                 <div className="intro_sec d-block d-lg-flex align-items-center">
