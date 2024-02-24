@@ -3,12 +3,10 @@ import {Col, Container, Row} from "react-bootstrap";
 import {
     dataabout,
     meta, careers,
-    // worktimeline,
     skills,
-    // services,
 } from "../../content_option";
 import "./style.css";
-import {Avatar} from "@mui/material";
+import {Avatar, Skeleton} from "@mui/material";
 
 export const About = () => {
     return (
@@ -22,7 +20,6 @@ export const About = () => {
                 <Row className="mb-5 mt-3 pt-md-3">
                     <Col lg="8">
                         <h1 className="display-4 mb-4">Takeshi Saito</h1>
-                        <Avatar alt="Remy Sharp" src={`${process.env.PUBLIC_URL}/icon-saito.jpg`}/>
                         <hr className="t_border my-4 ml-0 text-left"/>
                     </Col>
                 </Row>
@@ -32,7 +29,14 @@ export const About = () => {
                     </Col>
                     <Col lg="7" className="d-flex align-items-center">
                         <div>
-                            <p>{dataabout.aboutme}</p>
+                            <Avatar
+                                alt="Takeshi Saito"
+                                src={`${process.env.PUBLIC_URL}/icon-saito.jpg`}
+                                sx={{width: 256, height: 256}}
+                                style={{marginBottom: '50px'}}/>
+                            {dataabout.aboutme.split('\n').map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))}
                         </div>
                     </Col>
                 </Row>

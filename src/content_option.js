@@ -23,7 +23,8 @@ const socialprofils = {
 };
 const dataabout = {
     title: "About me",
-    aboutme: "I am currently working as a Technical Director at a CG company. My primary responsibilities include creating tools for Maya using Python, creating Blueprints necessary for production in UE, and developing tools required for workflow optimization. I am dedicated to building scalable systems, such as developing deadline(AWS) plugins and establishing CI/CD workflows with limited resources." +
+    aboutme: "I am currently working as a Technical Director at a CG company. My primary responsibilities include creating tools for Maya using Python, creating Blueprints necessary for production in UE, and developing tools required for workflow optimization. " +
+        "I am dedicated to building scalable systems, such as developing deadline(AWS) plugins and establishing CI/CD workflows with limited resources.\n" +
         "Additionally, I also create essential support tools for artists, including tools for virtual human production. I am actively working on ensuring the quality of in-house tools by implementing Python unittest.\n" +
         "Before this role, I worked as a Technical Artist, providing support for cinematic scenes in games. During this time, I gained experience in creating Python programs for DCC tools, developing standalone tools, and creating Blueprints for UE.\n" +
         "My career started as a client-side engineer for mobile games, where I worked with Unity and C#. Here, I was involved in both new development and the maintenance of existing titles. I learned how to optimize for low-end devices and focused on designing solutions that are easy to maintain.",
@@ -69,7 +70,7 @@ const careers = [
     },
     {
         title: "grimoire co., ltd.(2018 - 2021)",
-        description: "I have experience in everything from maintenance and operation of Unity mobile games to the development of new titles.",
+        description: "I experienced everything from maintenance of Unity mobile games to the development of new titles.",
     },
     {
         title: "Japan Steel Works, Ltd.(2016-2018)",
