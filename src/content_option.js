@@ -20,7 +20,7 @@ const socialprofils = {
     github: "https://github.com/TakeshiSaito",
     linkedin: "https://www.linkedin.com/in/takeshi-saito-aa6894180/",
     twitter: "https://twitter.com/TakeshiSaito_TA",
-    artstation: "https://www.artstation.com/fuka00",
+    artstation: "https://www.artstation.com/takeshisaito",
 };
 const dataabout = {
     title: "About me",
