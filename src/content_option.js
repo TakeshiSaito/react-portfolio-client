@@ -86,8 +86,8 @@ const careers = [
 const dataportfolio = [
     {
         img: `${process.env.PUBLIC_URL}/anome2.png`,
-        description: "Virtual Human LiveStreaming Project",
-        link: "https://anomevh.com/"
+        description: "Meido Sarasa ”Monday the 13th” Official MV",
+        link: "https://youtu.be/2I_alumYC1I?si=cRAqqLqBYKQpD0cx"
     },
     {
         img: `${process.env.PUBLIC_URL}/riverreve.jpg`,
