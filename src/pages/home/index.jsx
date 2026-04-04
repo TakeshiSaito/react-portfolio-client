@@ -49,7 +49,7 @@ export const Home = () => {
                                         </div>
                                     </Link>
                                     <Link to="/about">
-                                        <div id=" button_h" className="ac_btn btn">
+                                        <div id="button_h" className="ac_btn btn">
                                             About Me
                                             <div className="ring one"></div>
                                             <div className="ring two"></div>

@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# Takeshi Saito - Portfolio (React + Vite)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Quick Local Commands
+
+Use the helper script when you want to run commands immediately:
+
+```zsh
+cd /Users/saitoutakeshi/PycharmProjects/react-portfolio-client
+./scripts/portfolio.zsh install
+./scripts/portfolio.zsh build
+./scripts/portfolio.zsh start
+```
+
+Available commands:
+
+```zsh
+./scripts/portfolio.zsh help
+```
+
+## Local Build & Runtime Verification (Script Only)
+
+Run the following in order:
+
+```zsh
+cd /Users/saitoutakeshi/PycharmProjects/react-portfolio-client
+./scripts/portfolio.zsh check
+./scripts/portfolio.zsh install
+./scripts/portfolio.zsh build
+./scripts/portfolio.zsh start
+```
+
+How to verify:
+
+- `check`: confirms `node` and `npm` versions are detected.
+- `build`: completes without errors and creates the `dist/` directory.
+- `start`: launches the dev server; open `http://localhost:3000` in your browser.
+- `preview`: serves the production build locally for final verification.
+
+To stop the dev server, press `Ctrl + C` in the terminal.
+
 
 ## Available Scripts
 

@@ -36,6 +36,17 @@
     margin-bottom: calc(3rem + 5.128vw)
 }
 
+.About-header p:hover,
+.About-header .service_:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.About-header .service_:hover .service__title,
+.About-header .service_:hover .service_desc {
+    color: #fff;
+}
+
 @-webkit-keyframes animate-positive {
     0% {
         width: 0%;

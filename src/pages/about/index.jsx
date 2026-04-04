@@ -4,9 +4,10 @@ import {
     dataabout,
     meta, careers,
     skills,
+    certifications,
 } from "../../content_option";
 import "./style.css";
-import {Avatar, Skeleton} from "@mui/material";
+import {Avatar} from "@mui/material";
 import React from "react";
 
 export const About = () => {
@@ -32,7 +33,7 @@ export const About = () => {
                         <div>
                             <Avatar
                                 alt="Takeshi Saito"
-                                src={`${process.env.PUBLIC_URL}/icon-saito.jpg`}
+                                src="/icon-saito.jpg"
                                 sx={{width: 256, height: 256}}
                                 style={{marginBottom: '50px'}}/>
                             {dataabout.aboutme.split('\n').map((paragraph, index) => (
@@ -66,7 +67,7 @@ export const About = () => {
                     </Col>
                 </Row>
                 <Row className="sec_sp">
-                    <Col lang="5">
+                    <Col lg="5">
                         <h3 className="color_sec py-4">Careers</h3>
                     </Col>
                     <Col lg="7">
@@ -75,6 +76,21 @@ export const About = () => {
                                 <div className="service_ py-4" key={i}>
                                     <h5 className="service__title">{data.title}</h5>
                                     <p className="service_desc">{data.description}</p>
+                                </div>
+                            );
+                        })}
+                    </Col>
+                </Row>
+                <Row className="sec_sp">
+                    <Col lg="5">
+                        <h3 className="color_sec py-4">Certifications</h3>
+                    </Col>
+                    <Col lg="7">
+                        {certifications.map((data, i) => {
+                            return (
+                                <div className="service_ py-3" key={i}>
+                                    <h5 className="service__title">{data.title}</h5>
+                                    <p className="service_desc">{data.date}</p>
                                 </div>
                             );
                         })}
