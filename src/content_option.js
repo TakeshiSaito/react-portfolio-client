@@ -14,7 +14,7 @@ const introdata = {
 
 const meta = {
     title: "Takeshi Saito",
-    description: "Production Engineer currently working at a CG company somewhere in Tokyo",
+    description: "Production Engineer specializing in CG pipelines and technical workflows.",
 }
 const socialprofils = {
     github: "https://github.com/TakeshiSaito",
@@ -23,115 +23,43 @@ const socialprofils = {
 };
 const dataabout = {
     title: "About me",
-    aboutme: "I am a Production Engineer with 8+ years of experience in the game and CG industry. My passion lies in designing and optimizing CG production pipelines, bridging the gap between technical art and production workflows. I specialize in Python scripting, pipeline architecture, DCC tool integration, and CI/CD workflow optimization.\n" +
-        "Currently, I work at a CG company somewhere in Tokyo (2024.10 - Present), where I develop and maintain CG pipelines for production, optimize DCC tool workflows and integrations, build scalable pipeline architectures, and support technical implementation for production teams.\n" +
-        "Previously, I worked as a Technical Director at ModelingCafe inc. (2023.1 - 2024.9), and as a Python instructor at HAL Osaka (2023.11 - 2024.9). Before that, I worked as a Technical Artist in game production and started my career as a client-side engineer for Unity mobile games.",
+    aboutme: "I am a Production Engineer with 8+ years of experience in the game and CG industry. My passion lies in designing and optimizing CG production pipelines, bridging the gap between technical art and production workflows. I specialize in Python scripting, pipeline architecture, DCC tool integration, and CI/CD workflow optimization.\n\nCurrently: Production Engineer at a CG company somewhere in Tokyo (2024.10 - Present) 🗼 Tokyo\n- Developing and maintaining CG pipelines for production\n- Optimizing DCC tool workflows and integrations\n- Building scalable pipeline architectures\n- Supporting technical implementation for production teams\n\nPreviously: Python instructor at HAL Osaka (2023.11 - 2024.9)\n- Conducted practical Python lectures for 3D CG applications\n\nFun fact: I love muscle training 💪💪💪",
 };
 const skills = [
-    {
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "Unreal Engine",
-        value: 80,
-    },
-    {
-        name: "Autodesk Maya",
-        value: 75,
-    },
-    {
-        name: "Unity",
-        value: 70,
-    },
-    {
-        name: "CI/CD and Pipeline Automation",
-        value: 70,
-    },
+    { name: "Python", value: 95 },
+    { name: "Unreal Engine", value: 85 },
+    { name: "Autodesk Maya", value: 80 },
+    { name: "Unity", value: 85 },
+    { name: "C#", value: 75 },
+    { name: "C++", value: 65 },
+    { name: "Production Pipeline Development", value: 90 },
+    { name: "CI/CD & Deployment Workflows", value: 85 },
+    { name: "Tool Development for Artists", value: 90 },
+    { name: "Digital Human Production", value: 80 },
+    { name: "DCC Tool Integration", value: 85 },
+    { name: "Unit Testing & Code Quality", value: 80 },
+    { name: "Optimization for Low-end Devices", value: 75 },
 ];
 const careers = [
-    {
-        title: "A CG company in Tokyo (2024.10 - Present)",
-        description: "Production Engineer. Developing and maintaining CG production pipelines, optimizing DCC tool workflows, building scalable pipeline architectures, and supporting technical implementation for production teams.",
-    },
-    {
-        title: "ModelingCafe inc. (2023.1 - 2024.9)",
-        description: "Technical Director. Built pipelines, created digital human production tools, established CI/CD workflows for efficient deployment, and provided technical support for production.",
-    },
-    {
-        title: "HAL Osaka - Python Instructor (2023.11 - 2024.9)",
-        description: "Taught practical Python lectures for 3D CG applications.",
-    },
-    {
-        title: "ILCA .inc(2022.1 - 2022.12)",
-        description: "I developed consumer-oriented games using Unreal Engine, worked on the development of DCC tools with Python, constructed Blueprints in Unreal Engine, and was responsible for character rigging.",
-    },
-    {
-        title: "Digital Hollywood(2021.4 - 2022.3)",
-        description: "I learned how to use DCC tools such as Maya, ZBrush, Substance Painter, and Houdini, and studied the entire process of 3D CG creation.",
-    },
-    {
-        title: "grimoire co., ltd.(2018 - 2021)",
-        description: "I experienced everything from maintenance of Unity mobile games to the development of new titles.",
-    },
-    {
-        title: "Japan Steel Works, Ltd.(2016-2018)",
-        description: "I experienced in sales and production management.",
-    },
-    {
-        title: "Keio University(2011-2016)",
-        description: "I studied commerce.",
-    }
+    { title: "Production Engineer", description: "A CG company in Tokyo (2024.10 - Present): Developing and maintaining CG production pipelines, optimizing DCC tool workflows, building scalable pipeline architectures, supporting technical implementation for production teams." },
+    { title: "Technical Director", description: "ModelingCafe inc. (2023.1 - 2024.9): Built pipelines, created digital human production tools, established CI/CD workflows for efficient deployment, provided technical support for production." },
+    { title: "Python Instructor", description: "HAL Osaka (2023.11 - 2024.9): Taught practical Python lectures for 3D CG applications." },
+    { title: "Technical Artist", description: "ILCA inc. (2022): Developed consumer games using Unreal Engine, created DCC tools with Python, constructed Blueprints, performed character rigging." },
+    { title: "Student", description: "Digital Hollywood (2021 - 2022): Learned DCC tools (Maya, ZBrush, Substance Painter, Houdini), studied full 3D CG production pipeline." },
+    { title: "Client-side Engineer", description: "grimoire co., ltd. (2018 - 2021): Maintained and developed Unity mobile games, gained experience in optimization for low-end devices." },
+    { title: "Sales & Production Manager", description: "Japan Steel Works, Ltd. (2016 - 2018): Worked in sales and production management." },
+    { title: "Student", description: "Keio University (2011 - 2016): Studied commerce." },
 ];
-
 const certifications = [
-    {
-        title: "IPA Applied Information Technology Engineer Examination",
-        date: "2025.12",
-    },
-    {
-        title: "TOEIC Listening & Reading: 935",
-        date: "2023.02",
-    },
+    { title: "IPA Applied Information Technology Engineer Examination", date: "2025.12" },
+    { title: "TOEIC Listening & Reading: 935", date: "2023.02" },
+];
+const dataportfolio = [
+    { img: `/anome2.png`, description: "Meido Sarasa \u201CMonday the 13th\u201D Official MV", link: "https://youtu.be/2I_alumYC1I?si=cRAqqLqBYKQpD0cx" },
+    { img: `/riverreve.jpg`, description: "ReverseBlue\u00D7ReverseEnd", link: "https://rxr.happyelements.co.jp/" },
+    { img: `/brebre.png`, description: "BraveSword\u00D7BlazeSoul", link: "https://grimoire.co/bxb/" },
+    { img: `/ge-cloe-crop.jpg`, description: "Individual game project", link: "https://unityroom.com/games/growth_minigame" },
+    { img: `/dhw-still-icon.jpg`, description: "Digital Hollywood assignment", link: "https://www.artstation.com/artwork/bKqQLv" }
 ];
 
-const dataportfolio = [
-    {
-        img: `/anome2.png`,
-        description: "Meido Sarasa ”Monday the 13th” Official MV",
-        link: "https://youtu.be/2I_alumYC1I?si=cRAqqLqBYKQpD0cx"
-    },
-    {
-        img: `/riverreve.jpg`,
-        description: "ReverseBlue×ReverseEnd",
-        link: "https://rxr.happyelements.co.jp/",
-    },
-    {
-        img: `/brebre.png`,
-        description: "BraveSword×BlazeSoul",
-        link: "https://grimoire.co/bxb/",
-    },
-    {
-        img: `/ge-cloe-crop.jpg`,
-        description: "Individual game project",
-        link: "https://unityroom.com/games/growth_minigame"
-    },
-    {
-        img: `/dhw-still-icon.jpg`,
-        description: "Digital Hollywood assignment",
-        link: "https://www.artstation.com/artwork/bKqQLv"
-    }
-]
-
-
-export {
-    introdata,
-    meta,
-    logotext,
-    socialprofils,
-    dataabout,
-    skills,
-    careers,
-    certifications,
-    dataportfolio
-};
+export { introdata, meta, logotext, socialprofils, dataabout, skills, careers, certifications, dataportfolio };
