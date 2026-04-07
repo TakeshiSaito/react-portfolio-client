@@ -31,17 +31,17 @@ export const Headermain = () => {
                         <div className="menu__wrapper">
                             <div className="menu__container p-3">
                                 <ul className="the_menu">
-                                    <li className="menu_item ">
-                                        <Link onClick={handleToggle} to="/" className="my-3">Home</Link>
+                                    <li className="menu_item">
+                                        <Link onClick={handleToggle} to="/">Home</Link>
                                     </li>
                                     <li className="menu_item">
-                                        <Link onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                                        <Link onClick={handleToggle} to="/portfolio">Portfolio</Link>
                                     </li>
                                     <li className="menu_item">
-                                        <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                                        <Link onClick={handleToggle} to="/blog">Blog</Link>
                                     </li>
                                     <li className="menu_item">
-                                        <Link onClick={handleToggle} to="/blog" className="my-3">Blog</Link>
+                                        <Link onClick={handleToggle} to="/about">About</Link>
                                     </li>
                                 </ul>
                             </div>
