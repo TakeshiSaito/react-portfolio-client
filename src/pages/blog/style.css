@@ -326,6 +326,10 @@
     line-height: 1.4;
 }
 
+.blog_post_bottom_buttons {
+    padding-bottom: 6rem;
+}
+
 @media (max-width: 768px) {
     .blog_post_title {
         font-size: 1.75rem;
@@ -337,5 +341,9 @@
 
     .blog_post_nav_next {
         text-align: left;
+    }
+
+    .blog_post_bottom_buttons {
+        padding-bottom: 8rem;
     }
 }

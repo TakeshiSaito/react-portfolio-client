@@ -130,7 +130,7 @@ export const BlogPost = () => {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5 mb-5">
+                    <Row className="mt-5 blog_post_bottom_buttons">
                         <Col className="text-center">
                             <Link to="/blog" className="text_2">
                                 <div className="ac_btn btn">
