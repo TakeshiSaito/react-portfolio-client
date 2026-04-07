@@ -8,6 +8,7 @@ import {Socialicons} from "../components/socialicons";
 import {About} from "../pages/about";
 import {Portfolio} from "../pages/portfolio";
 import {Blog} from "../pages/blog";
+import {BlogPost} from "../pages/blog/BlogPost";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path={"/about"} element={<About/>}/>
                 <Route path={"/portfolio"} element={<Portfolio/>}/>
                 <Route path={"/blog"} element={<Blog/>}/>
+                <Route path={"/blog/:id"} element={<BlogPost/>}/>
                 <Route path="*" element={<Home/>}/>
             </Routes>
             <Socialicons/>
