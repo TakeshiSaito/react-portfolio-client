@@ -62,4 +62,47 @@ const dataportfolio = [
     { img: `/dhw-still-icon.jpg`, description: "Digital Hollywood assignment", link: "https://www.artstation.com/artwork/bKqQLv" }
 ];
 
-export { introdata, meta, logotext, socialprofils, dataabout, skills, careers, certifications, dataportfolio };
+const blogposts = [
+    {
+        id: 1,
+        title: "CGパイプライン構築の基礎",
+        excerpt: "効率的なCGパイプラインを構築するための基本的な考え方と、実際のプロジェクトでの実装例を紹介します。",
+        date: "2026-04-01",
+        category: "Pipeline",
+        readTime: "5 min",
+    },
+    {
+        id: 2,
+        title: "Pythonでの Maya ツール開発入門",
+        excerpt: "MayaのPython APIを使ったツール開発の始め方。基本的なスクリプト作成からGUIの構築まで解説。",
+        date: "2026-03-25",
+        category: "Python",
+        readTime: "8 min",
+    },
+    {
+        id: 3,
+        title: "CI/CDをCGワークフローに導入する方法",
+        excerpt: "Jenkins、GitHub Actionsを活用したCGプロダクションでの継続的インテグレーションの実践。",
+        date: "2026-03-15",
+        category: "DevOps",
+        readTime: "6 min",
+    },
+    {
+        id: 4,
+        title: "Digital Human制作のテクニカルノウハウ",
+        excerpt: "リアルなデジタルヒューマンを制作する際のテクニカルアーティストの視点からのアプローチ。",
+        date: "2026-03-08",
+        category: "Technical Art",
+        readTime: "10 min",
+    },
+    {
+        id: 5,
+        title: "DCCツール間のデータ連携ベストプラクティス",
+        excerpt: "Maya、Houdini、Unreal Engine間でのアセット連携を効率化するためのワークフロー設計。",
+        date: "2026-02-28",
+        category: "Pipeline",
+        readTime: "7 min",
+    },
+];
+
+export { introdata, meta, logotext, socialprofils, dataabout, skills, careers, certifications, dataportfolio, blogposts };

@@ -2,10 +2,13 @@ import React from "react";
 import "./style.css";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import {introdata, meta} from "../../content_option";
+import {introdata, meta, blogposts} from "../../content_option";
 import {Link} from "react-router-dom";
+import {Container} from "react-bootstrap";
 
 export const Home = () => {
+    const latestPosts = blogposts.slice(0, 3);
+    
     return (
         <HelmetProvider>
             <section id="home" className="home">
@@ -61,6 +64,33 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            
+            <section className="latest_posts_section">
+                <Container>
+                    <div className="latest_posts_header">
+                        <h2>Latest Blog Posts</h2>
+                        <Link to="/blog" className="text_2">
+                            <div id="button_blog" className="ac_btn btn">
+                                View All Posts
+                                <div className="ring one"></div>
+                                <div className="ring two"></div>
+                                <div className="ring three"></div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="latest_posts_grid">
+                        {latestPosts.map((post) => (
+                            <Link to={`/blog`} key={post.id} className="latest_post_link">
+                                <article className="latest_post_card">
+                                    <span className="latest_post_category">{post.category}</span>
+                                    <h3 className="latest_post_title">{post.title}</h3>
+                                    <p className="latest_post_meta">{post.date} · {post.readTime} read</p>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
+                </Container>
             </section>
         </HelmetProvider>
     )

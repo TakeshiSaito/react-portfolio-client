@@ -40,6 +40,9 @@ export const Headermain = () => {
                                     <li className="menu_item">
                                         <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
                                     </li>
+                                    <li className="menu_item">
+                                        <Link onClick={handleToggle} to="/blog" className="my-3">Blog</Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

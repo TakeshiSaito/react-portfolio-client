@@ -7,6 +7,7 @@ import {Headermain} from "../header";
 import {Socialicons} from "../components/socialicons";
 import {About} from "../pages/about";
 import {Portfolio} from "../pages/portfolio";
+import {Blog} from "../pages/blog";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path={"/about"} element={<About/>}/>
                 <Route path={"/portfolio"} element={<Portfolio/>}/>
+                <Route path={"/blog"} element={<Blog/>}/>
                 <Route path="*" element={<Home/>}/>
             </Routes>
             <Socialicons/>
