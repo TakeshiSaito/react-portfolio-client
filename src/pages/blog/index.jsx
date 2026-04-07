@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { blogposts, meta } from "../../content_option";
@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 export const Blog = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <HelmetProvider>
             <Container className="About-header">
