@@ -12,7 +12,7 @@ import "./style.css";
 export const BlogPost = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { lang, switchLang } = useLang();
+    const { lang } = useLang();
     const post = blogposts.find(p => p.id === id);
 
     useEffect(() => {
@@ -56,27 +56,9 @@ export const BlogPost = () => {
                 <article className="blog_post">
                     <Row className="mb-4 mt-3 pt-md-3">
                         <Col lg="10">
-                            <div className="blog_post_topbar">
-                                <Link to="/blog" className="blog_back_link">
-                                    <span className="blog_back_arrow">←</span> Back to Blog
-                                </Link>
-                                {hasOtherLang && (
-                                    <div className="lang_toggle">
-                                        <button
-                                            className={`lang_toggle_btn${lang === 'ja' ? ' active' : ''}`}
-                                            onClick={() => switchLang('ja')}
-                                        >
-                                            JA
-                                        </button>
-                                        <button
-                                            className={`lang_toggle_btn${lang === 'en' ? ' active' : ''}`}
-                                            onClick={() => switchLang('en')}
-                                        >
-                                            EN
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
+                            <Link to="/blog" className="blog_back_link">
+                                <span className="blog_back_arrow">←</span> Back to Blog
+                            </Link>
                             {isFallback && (
                                 <p className="lang_fallback_notice">
                                     {lang === 'en'

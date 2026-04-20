@@ -7,7 +7,7 @@ import { useLang } from "../../context/LangContext";
 import "./style.css";
 
 export const Blog = () => {
-    const { lang, switchLang } = useLang();
+    const { lang } = useLang();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -23,23 +23,7 @@ export const Blog = () => {
                 </Helmet>
                 <Row className="mb-5 mt-3 pt-md-3">
                     <Col lg="8">
-                        <div className="blog_header_row">
-                            <h1 className="display-4 mb-4">Blog</h1>
-                            <div className="lang_toggle">
-                                <button
-                                    className={`lang_toggle_btn${lang === 'ja' ? ' active' : ''}`}
-                                    onClick={() => switchLang('ja')}
-                                >
-                                    JA
-                                </button>
-                                <button
-                                    className={`lang_toggle_btn${lang === 'en' ? ' active' : ''}`}
-                                    onClick={() => switchLang('en')}
-                                >
-                                    EN
-                                </button>
-                            </div>
-                        </div>
+                        <h1 className="display-4 mb-4">Blog</h1>
                         <hr className="t_border my-4 ml-0 text-left" />
                     </Col>
                 </Row>

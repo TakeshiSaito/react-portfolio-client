@@ -5,8 +5,10 @@ import Typewriter from "typewriter-effect";
 import {introdata, meta, blogposts} from "../../content_option";
 import {Link} from "react-router-dom";
 import {Container} from "react-bootstrap";
+import {useLang} from "../../context/LangContext";
 
 export const Home = () => {
+    const { lang } = useLang();
     const hasPosts = blogposts.length > 0;
     const latestPosts = blogposts.slice(0, 3);
 
@@ -92,15 +94,18 @@ export const Home = () => {
                             </Link>
                         </div>
                         <div className="latest_posts_grid">
-                            {latestPosts.map((post) => (
-                                <Link to={`/blog`} key={post.id} className="latest_post_link">
-                                    <article className="latest_post_card">
-                                        <span className="latest_post_category">{post.category}</span>
-                                        <h3 className="latest_post_title">{post.title}</h3>
-                                        <p className="latest_post_meta">{post.date} · {post.readTime} read</p>
-                                    </article>
-                                </Link>
-                            ))}
+                            {latestPosts.map((post) => {
+                                const content = post[lang] || post.ja || post.en;
+                                return (
+                                    <Link to={`/blog/${post.id}`} key={post.id} className="latest_post_link">
+                                        <article className="latest_post_card">
+                                            <span className="latest_post_category">{content.category}</span>
+                                            <h3 className="latest_post_title">{content.title}</h3>
+                                            <p className="latest_post_meta">{post.date} · {content.readTime} read</p>
+                                        </article>
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </Container>
                 </section>
