@@ -1,12 +1,11 @@
+// ブログ記事は src/content 配下の Markdown から読み込む
+import { blogposts } from "./content/blogLoader.js";
+
 const logotext = "SAITO";
 
 const introdata = {
     title: "I`m Takeshi Saito",
-    animated: {
-        first: "I develop CG pipelines",
-        second: "I build tools for production",
-        third: "I love computer graphics",
-    },
+    headline: "I develop CG pipelines",
     description: "Production Engineer | Technical Artist | Programmer",
     home_img_url: `/dhw-still-half.jpg`,
     e_mail: "takeshi.saito.9119@gmail.com"
@@ -25,20 +24,16 @@ const dataabout = {
     title: "About me",
     aboutme: "I am a Production Engineer with 8+ years of experience in the game and CG industry. My passion lies in designing and optimizing CG production pipelines, bridging the gap between technical art and production workflows. I specialize in Python scripting, pipeline architecture, DCC tool integration, and CI/CD workflow optimization.\n\nCurrently: Production Engineer at a CG company somewhere in Tokyo (2024.10 - Present) 🗼 Tokyo\n- Developing and maintaining CG pipelines for production\n- Optimizing DCC tool workflows and integrations\n- Building scalable pipeline architectures\n- Supporting technical implementation for production teams\n\nPreviously: Python instructor at HAL Osaka (2023.11 - 2024.9)\n- Conducted practical Python lectures for 3D CG applications\n\nFun fact: I love muscle training 💪💪💪",
 };
-const skills = [
-    { name: "Python", value: 95 },
-    { name: "Unreal Engine", value: 85 },
-    { name: "Autodesk Maya", value: 80 },
-    { name: "Unity", value: 85 },
-    { name: "C#", value: 75 },
-    { name: "C++", value: 65 },
-    { name: "Production Pipeline Development", value: 90 },
-    { name: "CI/CD & Deployment Workflows", value: 85 },
-    { name: "Tool Development for Artists", value: 90 },
-    { name: "Digital Human Production", value: 80 },
-    { name: "DCC Tool Integration", value: 85 },
-    { name: "Unit Testing & Code Quality", value: 80 },
-    { name: "Optimization for Low-end Devices", value: 75 },
+const technologies = [
+    { name: "Python" },
+    { name: "Unreal Engine" },
+    { name: "Autodesk Maya" },
+    { name: "Houdini" },
+    { name: "Unity" },
+    { name: "C#" },
+    { name: "C++" },
+    { name: "Git" },
+    { name: "GitHub Actions" },
 ];
 const careers = [
     { title: "Production Engineer", description: "A CG company in Tokyo (2024.10 - Present): Developing and maintaining CG production pipelines, optimizing DCC tool workflows, building scalable pipeline architectures, supporting technical implementation for production teams." },
@@ -62,4 +57,5 @@ const dataportfolio = [
     { img: `/dhw-still-icon.jpg`, description: "Digital Hollywood assignment", link: "https://www.artstation.com/artwork/bKqQLv" }
 ];
 
-export { introdata, meta, logotext, socialprofils, dataabout, skills, careers, certifications, dataportfolio };
+
+export { introdata, meta, logotext, socialprofils, dataabout, technologies, careers, certifications, dataportfolio, blogposts };
