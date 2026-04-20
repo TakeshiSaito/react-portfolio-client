@@ -3,12 +3,35 @@ import {Col, Container, Row} from "react-bootstrap";
 import {
     dataabout,
     meta, careers,
-    skills,
+    technologies,
     certifications,
 } from "../../content_option";
 import "./style.css";
 import {Avatar} from "@mui/material";
 import React from "react";
+import {FaGitAlt} from "react-icons/fa";
+import {
+    SiAutodeskmaya,
+    SiCplusplus,
+    SiGithubactions,
+    SiHoudini,
+    SiPython,
+    SiUnity,
+    SiUnrealengine,
+} from "react-icons/si";
+import {TbBrandCSharp} from "react-icons/tb";
+
+const technologyIcons = {
+    Python: SiPython,
+    "Unreal Engine": SiUnrealengine,
+    "Autodesk Maya": SiAutodeskmaya,
+    Houdini: SiHoudini,
+    Unity: SiUnity,
+    "C#": TbBrandCSharp,
+    "C++": SiCplusplus,
+    Git: FaGitAlt,
+    "GitHub Actions": SiGithubactions,
+};
 
 export const About = () => {
     return (
@@ -44,26 +67,22 @@ export const About = () => {
                 </Row>
                 <Row className="sec_sp">
                     <Col lg="5">
-                        <h3 className="color_sec py-4">Top Skills</h3>
+                        <h3 className="color_sec py-4">Experienced Technologies</h3>
                     </Col>
                     <Col lg="7">
-                        {skills.map((data, i) => {
+                        <div className="technology-grid">
+                        {technologies.map((data, i) => {
+                            const Icon = technologyIcons[data.name];
                             return (
-                                <div key={i}>
-                                    <h3 className="progress-title">{data.name}</h3>
-                                    <div className="progress">
-                                        <div
-                                            className="progress-bar"
-                                            style={{
-                                                width: `${data.value}%`,
-                                            }}
-                                        >
-                                            <div className="progress-value">{data.value}%</div>
-                                        </div>
+                                <div className="technology-card" key={i}>
+                                    <div className="technology-icon">
+                                        <Icon aria-hidden="true"/>
                                     </div>
+                                    <span className="technology-name">{data.name}</span>
                                 </div>
                             );
                         })}
+                        </div>
                     </Col>
                 </Row>
                 <Row className="sec_sp">

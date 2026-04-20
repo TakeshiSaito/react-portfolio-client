@@ -150,8 +150,8 @@ export const BlogPost = () => {
 
                     <Row className="mt-5 blog_post_bottom_buttons">
                         <Col className="text-center">
-                            <Link to="/blog" className="text_2">
-                                <div className="ac_btn btn">
+                            <Link to="/blog" className="text_2 blog_bottom_link">
+                                <div className="ac_btn btn" id="button_back_blog">
                                     Back to Blog
                                     <div className="ring one"></div>
                                     <div className="ring two"></div>
