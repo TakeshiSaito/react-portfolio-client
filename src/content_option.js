@@ -5,7 +5,11 @@ const logotext = "SAITO";
 
 const introdata = {
     title: "I`m Takeshi Saito",
-    headline: "I develop CG pipelines",
+    animated: {
+        first: "I develop CG pipelines",
+        second: "I build tools for production",
+        third: "I love computer graphics",
+    },
     description: "Production Engineer | Technical Artist | Programmer",
     home_img_url: `/dhw-still-half.jpg`,
     e_mail: "takeshi.saito.9119@gmail.com"
