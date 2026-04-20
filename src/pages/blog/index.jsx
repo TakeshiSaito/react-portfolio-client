@@ -3,9 +3,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { blogposts, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import { useLang } from "../../context/LangContext";
 import "./style.css";
 
 export const Blog = () => {
+    const { lang, switchLang } = useLang();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -20,27 +23,53 @@ export const Blog = () => {
                 </Helmet>
                 <Row className="mb-5 mt-3 pt-md-3">
                     <Col lg="8">
-                        <h1 className="display-4 mb-4">Blog</h1>
+                        <div className="blog_header_row">
+                            <h1 className="display-4 mb-4">Blog</h1>
+                            <div className="lang_toggle">
+                                <button
+                                    className={`lang_toggle_btn${lang === 'ja' ? ' active' : ''}`}
+                                    onClick={() => switchLang('ja')}
+                                >
+                                    JA
+                                </button>
+                                <button
+                                    className={`lang_toggle_btn${lang === 'en' ? ' active' : ''}`}
+                                    onClick={() => switchLang('en')}
+                                >
+                                    EN
+                                </button>
+                            </div>
+                        </div>
                         <hr className="t_border my-4 ml-0 text-left" />
                     </Col>
                 </Row>
                 <div className="blog_list">
-                    {blogposts.map((post) => (
-                        <article key={post.id} className="blog_card">
-                            <div className="blog_card_header">
-                                <span className="blog_category">{post.category}</span>
-                                <span className="blog_date">{post.date}</span>
-                            </div>
-                            <h2 className="blog_title">{post.title}</h2>
-                            <p className="blog_excerpt">{post.excerpt}</p>
-                            <div className="blog_card_footer">
-                                <span className="blog_readtime">{post.readTime} read</span>
-                                <Link to={`/blog/${post.id}`} className="blog_readmore">
-                                    Read More
-                                </Link>
-                            </div>
-                        </article>
-                    ))}
+                    {blogposts.map((post) => {
+                        const content = post[lang] || post.ja || post.en;
+                        const isOnlyLang = !(post.ja && post.en);
+                        const onlyLangLabel = post.ja ? 'JA only' : 'EN only';
+                        return (
+                            <article key={post.id} className="blog_card">
+                                <div className="blog_card_header">
+                                    <span className="blog_category">{content.category}</span>
+                                    <span className="blog_date">{post.date}</span>
+                                </div>
+                                <h2 className="blog_title">
+                                    {content.title}
+                                    {isOnlyLang && (
+                                        <span className="lang_only_badge">{onlyLangLabel}</span>
+                                    )}
+                                </h2>
+                                <p className="blog_excerpt">{content.excerpt}</p>
+                                <div className="blog_card_footer">
+                                    <span className="blog_readtime">{content.readTime} read</span>
+                                    <Link to={`/blog/${post.id}`} className="blog_readmore">
+                                        Read More
+                                    </Link>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
                 <Row className="mt-5 mb-5">
                     <Col className="text-center">

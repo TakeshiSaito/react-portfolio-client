@@ -9,12 +9,16 @@ applyTo: "src/content/*.md"
 ## ファイル名規則
 
 ```
-YYYYMMDD-slug.md
+YYYYMMDD-slug.ja.md   ← 日本語版
+YYYYMMDD-slug.en.md   ← 英語版
 ```
 
 - `YYYYMMDD`: 公開日（例: `20260420`）
 - `slug`: 記事を識別するケバブケースの英数字（例: `maya-ai-agent`）
+- `ja` / `en`: 言語サフィックス（必須）
 - ファイル名の slug 部分がそのまま URL になる（例: `/blog/maya-ai-agent`）
+- 両言語のファイルは同じ slug を使うこと（例: `20260420-maya-ai-agent.ja.md` と `20260420-maya-ai-agent.en.md`）
+- 片言語のみでも問題なし。一覧に `JA only` / `EN only` バッジが表示される
 
 ## frontmatter（必須）
 
@@ -67,7 +71,7 @@ URL を自動生成
 
 ### 記事追加の手順
 
-1. `develop` ブランチで `src/content/YYYYMMDD-slug.md` を作成
+1. `develop` ブランチで `src/content/YYYYMMDD-slug.ja.md`（と必要なら `.en.md`）を作成
 2. frontmatter と本文を書く
 3. `develop` に push → Vercel がプレビュー URL を自動生成（動作確認に使う）
 4. 公開準備ができたら `develop` → `main` への PR を作成してマージ
@@ -82,4 +86,4 @@ URL を自動生成
 
 GitHub Actions による追加のデプロイ設定は不要。Vercel の GitHub 連携が自動で処理します。
 
-既存の記事ファイルを参考にする場合は `src/content/20260420-maya-ai-agent.md` を参照してください。
+既存の記事ファイルを参考にする場合は `src/content/20260420-maya-ai-agent.ja.md` を参照してください。

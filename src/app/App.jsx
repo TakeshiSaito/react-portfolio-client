@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
+import {LangProvider} from "../context/LangContext";
 import {Home} from "../pages/home";
 import {Headermain} from "../header";
 import {Socialicons} from "../components/socialicons";
@@ -12,6 +13,7 @@ import {BlogPost} from "../pages/blog/BlogPost";
 
 function App() {
     return (
+        <LangProvider>
         <div className="App">
             <Headermain/>
             <Routes>
@@ -24,6 +26,7 @@ function App() {
             </Routes>
             <Socialicons/>
         </div>
+        </LangProvider>
     );
 }
 

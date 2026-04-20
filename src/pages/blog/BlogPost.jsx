@@ -6,11 +6,13 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useLang } from "../../context/LangContext";
 import "./style.css";
 
 export const BlogPost = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const { lang, switchLang } = useLang();
     const post = blogposts.find(p => p.id === id);
 
     useEffect(() => {
@@ -37,21 +39,51 @@ export const BlogPost = () => {
     const prevPost = currentIndex < blogposts.length - 1 ? blogposts[currentIndex + 1] : null;
     const nextPost = currentIndex > 0 ? blogposts[currentIndex - 1] : null;
 
+    // 選択中の言語版がなければ存在する方にフォールバック
+    const langData = post[lang] || post.ja || post.en;
+    const isFallback = !post[lang];
+    const hasOtherLang = post.ja && post.en;
+
     return (
         <HelmetProvider>
             <Container className="About-header">
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>{post.title} | {meta.title}</title>
-                    <meta name="description" content={post.excerpt} />
+                    <title>{langData.title} | {meta.title}</title>
+                    <meta name="description" content={langData.excerpt} />
                 </Helmet>
-                
+
                 <article className="blog_post">
                     <Row className="mb-4 mt-3 pt-md-3">
                         <Col lg="10">
-                            <Link to="/blog" className="blog_back_link">
-                                <span className="blog_back_arrow">←</span> Back to Blog
-                            </Link>
+                            <div className="blog_post_topbar">
+                                <Link to="/blog" className="blog_back_link">
+                                    <span className="blog_back_arrow">←</span> Back to Blog
+                                </Link>
+                                {hasOtherLang && (
+                                    <div className="lang_toggle">
+                                        <button
+                                            className={`lang_toggle_btn${lang === 'ja' ? ' active' : ''}`}
+                                            onClick={() => switchLang('ja')}
+                                        >
+                                            JA
+                                        </button>
+                                        <button
+                                            className={`lang_toggle_btn${lang === 'en' ? ' active' : ''}`}
+                                            onClick={() => switchLang('en')}
+                                        >
+                                            EN
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                            {isFallback && (
+                                <p className="lang_fallback_notice">
+                                    {lang === 'en'
+                                        ? 'This post is not available in English.'
+                                        : 'この記事は日本語版がありません。'}
+                                </p>
+                            )}
                         </Col>
                     </Row>
 
@@ -59,12 +91,12 @@ export const BlogPost = () => {
                         <Col lg="10">
                             <header className="blog_post_header">
                                 <div className="blog_post_meta">
-                                    <span className="blog_category">{post.category}</span>
+                                    <span className="blog_category">{langData.category}</span>
                                     <span className="blog_date">{post.date}</span>
-                                    <span className="blog_readtime">{post.readTime} read</span>
+                                    <span className="blog_readtime">{langData.readTime} read</span>
                                 </div>
-                                <h1 className="blog_post_title">{post.title}</h1>
-                                <p className="blog_post_excerpt">{post.excerpt}</p>
+                                <h1 className="blog_post_title">{langData.title}</h1>
+                                <p className="blog_post_excerpt">{langData.excerpt}</p>
                             </header>
                             <hr className="t_border my-4 ml-0 text-left" />
                         </Col>
@@ -100,7 +132,7 @@ export const BlogPost = () => {
                                         strong: ({ children }) => <strong className="blog_content_strong">{children}</strong>,
                                     }}
                                 >
-                                    {post.content}
+                                    {langData.content}
                                 </ReactMarkdown>
                             </div>
                         </Col>
@@ -114,7 +146,9 @@ export const BlogPost = () => {
                                     {prevPost && (
                                         <Link to={`/blog/${prevPost.id}`}>
                                             <span className="blog_post_nav_label">Previous Post</span>
-                                            <span className="blog_post_nav_title">{prevPost.title}</span>
+                                            <span className="blog_post_nav_title">
+                                                {(prevPost[lang] || prevPost.ja || prevPost.en).title}
+                                            </span>
                                         </Link>
                                     )}
                                 </div>
@@ -122,7 +156,9 @@ export const BlogPost = () => {
                                     {nextPost && (
                                         <Link to={`/blog/${nextPost.id}`}>
                                             <span className="blog_post_nav_label">Next Post</span>
-                                            <span className="blog_post_nav_title">{nextPost.title}</span>
+                                            <span className="blog_post_nav_title">
+                                                {(nextPost[lang] || nextPost.ja || nextPost.en).title}
+                                            </span>
                                         </Link>
                                     )}
                                 </div>
