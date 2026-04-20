@@ -11,7 +11,7 @@ import "./style.css";
 export const BlogPost = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const post = blogposts.find(p => p.id === parseInt(id));
+    const post = blogposts.find(p => p.id === id);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -33,7 +33,7 @@ export const BlogPost = () => {
         );
     }
 
-    const currentIndex = blogposts.findIndex(p => p.id === parseInt(id));
+    const currentIndex = blogposts.findIndex(p => p.id === id);
     const prevPost = currentIndex < blogposts.length - 1 ? blogposts[currentIndex + 1] : null;
     const nextPost = currentIndex > 0 ? blogposts[currentIndex - 1] : null;
 
