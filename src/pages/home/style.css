@@ -98,6 +98,26 @@ section {
     position: relative;
 }
 
+.intro_btn-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 991.98px) {
+    .intro_btn-action {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .intro_btn-action .ac_btn {
+        margin-right: 0;
+        padding: 4px 10px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+}
+
 .ac_btn {
     padding: 4px 19px;
     color: var(--secondary-color);
